@@ -61,14 +61,16 @@ st.write(f"Точность модели: {accuracy:.2f}")
 st.header("График1: Распределение объема оперативной памяти по ценовым категориям")
 fig1 = px.histogram(data, x="CatRam", color="price_range",
                    barmode='group', nbins=15,
-                  color_discrete_sequence=['green','yellow','blue','red'],
+                   color_discrete_sequence=['green','yellow','blue','red'],
                    title="Распределение оперативной памяти по ценовым категориям")
 fig1.update_layout(xaxis_title="Категория RAM", yaxis_title="Количество")
 st.plotly_chart(fig1)
 
 #график 2
 st.header("График2: Распределение размера экрана в пикселях по ценовым категориям")
-fig2 = px.histogram(data, x="SqrtScr", color="price_range",barmode='group', nbins=5, title="Распределениеразмера экрана по ценовым категориям")
+fig2 = px.histogram(data, x = "SqrtScr", color="price_range",
+                    barmode='group', nbins=5, 
+                    title="Распределениеразмера экрана по ценовым категориям")
 fig2.update_layout(xaxis_title="Размер экрана в пикселях", yaxis_title="Количество")
 st.plotly_chart(fig2)
 
