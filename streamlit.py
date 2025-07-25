@@ -1,11 +1,11 @@
-importstreamlit as st
-importpandas as pd
-importplotly.express as px
-importshap
-fromsklearn.model_selection import train_test_split
-fromsklearn.tree import DecisionTreeClassifier
-fromsklearn.metrics import accuracy_score
-importmatplotlib.pyplot as plt
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+import shap
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+import matplotlib.pyplot as plt
 
  
 st.set_page_config(page_title="Марченко_Егор_Владиславович_2023-ФГиИБ-ПИ-1б_Вариант_15_Ценовой_диапазон_телефонов")
