@@ -1,0 +1,7 @@
+scikit-learn>=1.7.1
+pandas>=2.3.1
+numpy>=2.2.6
+streamlit>=1.47.0
+shap>=0.48.0
+plotly>=6.2.0
+matplotlib>=3.10.3
