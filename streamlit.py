@@ -52,8 +52,8 @@ model.fit(X_train,
 y_train)
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
-precision = precision_score(y_test, y_pred)
-recall = recall_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred, average = 'weighted')
+recall = recall_score(y_test, y_pred, average = 'weighted')
  
 #точность модели
 st.header("Метрики оценки модели:")
