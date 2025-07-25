@@ -74,7 +74,7 @@ st.plotly_chart(fig1)
 st.header("График2: Распределение размера экрана в пикселях по ценовым категориям")
 fig2 = px.histogram(data, x = "SqPx", color="price_range",
                     barmode='group', nbins=5, 
-                    title="Распределениеразмера экрана по ценовым категориям")
+                    title="Распределение размера экрана по ценовым категориям")
 fig2.update_layout(xaxis_title="Размер экрана в пикселях", yaxis_title="Количество")
 st.plotly_chart(fig2)
 
