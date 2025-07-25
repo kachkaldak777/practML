@@ -4,7 +4,7 @@ import plotly.express as px
 import shap
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score
 import matplotlib.pyplot as plt
 
  
@@ -52,10 +52,14 @@ model.fit(X_train,
 y_train)
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
  
 #точность модели
-st.header("Точность модели")
-st.write(f"Точность модели: {accuracy:.2f}")
+st.header("Метрики оценки модели:")
+st.write(f"Accuracy модели: {accuracy:.2f}")
+st.write(f"Precision модели: {precision:.2f}")
+st.write(f"Recall модели: {recall:.2f}")
  
 #график1
 st.header("График1: Распределение объема оперативной памяти по ценовым категориям")
